@@ -59,7 +59,17 @@ npm install
 Use 'ng serve'
 http://localhost:4200/
 
+#Contributing
+Contributions are welcome!
+Fork the project
+Create a new branch (feature-name)
+Commit changes
+Open a pull request
 
+Author
+Christal Riziki
+ Kenya
+ GitHub: https://github.com/CrissyDev
 
 
 
