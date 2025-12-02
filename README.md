@@ -17,7 +17,7 @@ It enables real-time tracking of environmental conditions, crop status, and farm
 
 | Category | Technology |
 
-| Framework | **Angular 19** |
+| Framework | **Angular 20** |
 | Styling | CSS, Bootstrap, FontAwesome |
 | Development Tools | TypeScript |
 | Future Integrations | Firebase, Node.js, IoT APIs |
