@@ -1,0 +1,199 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 20px;
+}
+
+.content {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  border-radius: 20px;
+  padding: 60px 40px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Logo Section - For Image */
+.logo-section {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-image {
+  max-width: 300px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Alternative: If you want to keep the text logo */
+.logo {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #2c3e50;
+  letter-spacing: -1px;
+  margin: 0;
+  background: linear-gradient(90deg, #27ae60, #2ecc71);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Main Content */
+.main-content {
+  margin-bottom: 60px;
+}
+
+.subtitle {
+  font-size: 1.8rem;
+  color: #34495e;
+  margin-bottom: 25px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #5d6d7e;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  padding: 0 20px;
+}
+
+.divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ddd, transparent);
+  margin: 40px auto;
+  max-width: 300px;
+}
+
+/* Button Section */
+.button-section {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.btn {
+  padding: 14px 36px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-login {
+  background-color: transparent;
+  color: #27ae60;
+  border: 2px solid #27ae60;
+}
+
+.btn-login:hover {
+  background-color: #27ae60;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(39, 174, 96, 0.3);
+}
+
+.btn-signup {
+  background-color: #27ae60;
+  color: white;
+  border: 2px solid #27ae60;
+}
+
+.btn-signup:hover {
+  background-color: #219653;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(39, 174, 96, 0.3);
+}
+
+/* Footer */
+.footer {
+  margin-top: 60px;
+  padding-top: 30px;
+  border-top: 1px solid #eee;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.built-with {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  font-weight: 500;
+}
+
+.arrow {
+  font-size: 1.2rem;
+  animation: bounce 2s infinite;
+}
+
+/* Animation for arrow */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content {
+    padding: 40px 20px;
+  }
+  
+  .logo-image {
+    max-width: 250px;
+  }
+  
+  .logo {
+    font-size: 2.8rem;
+  }
+  
+  .subtitle {
+    font-size: 1.5rem;
+  }
+  
+  .description {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+  
+  .button-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .btn {
+    width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-image {
+    max-width: 200px;
+  }
+  
+  .logo {
+    font-size: 2.2rem;
+  }
+}
