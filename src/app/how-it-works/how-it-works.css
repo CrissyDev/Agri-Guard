@@ -1,28 +1,98 @@
-:root{
+/* ------------------------------ */
+/* Global Theme Variables         */
+/* ------------------------------ */
+:root {
   --brown-900: #4e342e;
   --brown-700: #6d4c41;
+  --brown-400: #8d6e63;
   --brown-200: #f7efe7;
   --white: #ffffff;
   --muted: #6b4f45;
+  --radius-lg: 18px;
+  --radius-md: 14px;
+  --shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.12);
+  --shadow-md: 0 6px 18px rgba(78,52,46,0.12);
+  --shadow-hover: 0 18px 36px rgba(78,52,46,0.18);
 }
+
+/* Shared container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+}
+
+/* ------------------------------ */
+/* FEATURES SECTION               */
+/* ------------------------------ */
+
+.features-section {
+  background: var(--brown-200);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.features-title {
+  font-size: 2.8rem;
+  margin-bottom: 3rem;
+  color: var(--brown-900);
+  font-weight: 700;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.icon {
+  font-size: 3rem;
+  color: var(--brown-700);
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  color: var(--brown-900);
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.feature-card p {
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+
+/* ------------------------------ */
+/* HOW IT WORKS SECTION           */
+/* ------------------------------ */
 
 .hiw-section {
   background: var(--brown-200);
   padding: 4rem 1.25rem;
   color: var(--brown-900);
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .hiw-title {
   text-align: center;
   font-size: 2.6rem;
   margin-bottom: 0.5rem;
-  color: var(--brown-900);
   font-weight: 700;
 }
 
@@ -33,6 +103,7 @@
   font-size: 1.05rem;
 }
 
+/* Timeline grid */
 .timeline {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -40,27 +111,27 @@
   align-items: stretch;
 }
 
+/* Step Cards */
 .step-card {
   background: var(--white);
-  border-radius: 14px;
+  border-radius: var(--radius-md);
   padding: 1.75rem;
-  box-shadow: 0 6px 18px rgba(78,52,46,0.12);
-  transition: transform 220ms cubic-bezier(.2,.9,.2,1), box-shadow 220ms;
+  box-shadow: var(--shadow-md);
+  transition: transform 220ms cubic-bezier(.2, .9, .2, 1), box-shadow 220ms;
   position: relative;
-  overflow: visible;
-  text-align: left;
   min-height: 220px;
   display: flex;
   flex-direction: column;
 }
 
-.step-card:focus,
-.step-card:hover {
+.step-card:hover,
+.step-card:focus {
   transform: translateY(-10px);
-  box-shadow: 0 18px 36px rgba(78,52,46,0.18);
+  box-shadow: var(--shadow-hover);
   outline: none;
 }
 
+/* Step numbers */
 .step-badge {
   position: absolute;
   top: -14px;
@@ -70,14 +141,15 @@
   border: 3px solid rgba(109,76,65,0.08);
   width: 44px;
   height: 44px;
-  border-radius: 999px;
+  border-radius: 50%;
   display: grid;
   place-items: center;
   font-weight: 700;
-  box-shadow: 0 6px 12px rgba(78,52,46,0.06);
   font-size: 1.05rem;
+  box-shadow: 0 6px 12px rgba(78,52,46,0.06);
 }
 
+/* Icons inside the cards */
 .step-icon {
   width: 64px;
   height: 64px;
@@ -90,20 +162,24 @@
   margin-bottom: 1rem;
 }
 
+/* Titles & text */
 .step-title {
   color: var(--brown-900);
   font-size: 1.15rem;
   font-weight: 700;
-  margin: 0 0 .6rem 0;
+  margin-bottom: .6rem;
 }
 
 .step-desc {
   color: var(--muted);
   line-height: 1.6;
-  margin: 0;
   font-size: 0.99rem;
-  margin-top: auto; 
+  margin-top: auto;
 }
+
+/* ------------------------------ */
+/* RESPONSIVENESS                 */
+/* ------------------------------ */
 
 @media (max-width: 1000px) {
   .timeline {
@@ -118,15 +194,14 @@
 
   .step-card {
     padding: 1.25rem;
-    min-height: auto;
   }
 
   .step-badge {
-    left: 14px;
-    top: -12px;
     width: 38px;
     height: 38px;
     font-size: 0.95rem;
+    top: -12px;
+    left: 14px;
   }
 
   .step-icon {
@@ -134,8 +209,4 @@
     height: 52px;
     font-size: 1.25rem;
   }
-}
-
-.step-card:focus {
-  box-shadow: 0 22px 44px rgba(78,52,46,0.2), 0 0 0 4px rgba(109,76,65,0.06);
 }
