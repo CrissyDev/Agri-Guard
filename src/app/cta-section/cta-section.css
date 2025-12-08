@@ -1,0 +1,43 @@
+:root {
+  --brown-dark: #4e342e;
+  --brown-light: #6d4c41;
+  --cream: #f8f3ee;
+  --white: #ffffff;
+}
+
+.cta-wrapper {
+  background: var(--brown-light);
+  color: var(--white);
+  text-align: center;
+  padding: 4rem 1.5rem;
+}
+
+.cta-title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.cta-sub {
+  font-size: 1.2rem;
+  max-width: 720px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.6;
+}
+
+.cta-btn {
+  background: var(--white);
+  border: none;
+  padding: 0.9rem 2rem;
+  border-radius: 10px;
+  color: var(--brown-dark);
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.cta-btn:hover {
+  background: var(--cream);
+  transform: translateY(-3px);
+}
